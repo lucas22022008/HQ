@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NewAmsterdam';
+    src: url('../fonts/NewAmsterdam-Regular.ttf') format('truetype');
+}
+:root {
+    --principal: #4569cc;
+}
+header {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+.logo p {
+    font-family: "NewAmsterdam";
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-link {
+    transition: .5s ease;
+    &:hover {
+        color: var(--principal);
+    }
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #000;
+    transition: all .3s ease-in-out;
+}
+
+@media (max-width: 850px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #FFF;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        transition: .3s;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+}
