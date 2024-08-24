@@ -26,7 +26,7 @@ main {
 /* INICIO */
 #inicio {
     width: 100%;
-    height: 91vh;
+    height: 90vh;
     background: url("../img/background-mobile.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
@@ -136,7 +136,7 @@ main {
 
 .image {
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .image img {
@@ -175,38 +175,85 @@ main {
 .perfis {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .perfil {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 28px;
+    gap: 12px;
     margin-bottom: 29px;
 }
 
 .foto {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    background-color: #FFF;
+    position: relative;
+    z-index: 0;
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.foto::after,
+.foto::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 4px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: rotacao infinite linear 2s;
+    z-index: -1;
+}
+
+.perfil:nth-child(1) .foto::after,
+.perfil:nth-child(1) .foto::before {
+    background-image: conic-gradient( transparent 20%, #ff3939 );
+}
+
+.perfil:nth-child(2) .foto::after,
+.perfil:nth-child(2) .foto::before {
+    background-image: conic-gradient( transparent 20%, #2b98f1 );
+}
+
+.foto::before {
+    filter: blur(.8rem);
+}
+
+@keyframes rotacao {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 .info {
     display: flex;
     flex-direction: column;
     align-items: start;
+    width: 200px;
 }
 
 .nome {
     font-family: "NewAmsterdam";
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #353535;
 }
 
 .cargo {
     font-family: "Acme";
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #444444;
     margin-bottom: 12px;
 }
 
@@ -219,4 +266,30 @@ main {
 
 .social img {
     width: 28px;
+}
+
+@media (min-width: 1160px) {
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        text-align: justify;
+        padding: 24px 60px;
+        position: relative;
+    }
+    .historia {
+        max-width: 400px;
+    }
+    .image {
+        max-width: 700px;
+        max-height: 600px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .image img {
+        width: 100%;
+        height: 100%;
+    }
 }
