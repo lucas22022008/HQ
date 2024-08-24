@@ -70,3 +70,153 @@ main {
         }
     }
 }
+
+/* SOBRE */
+#sobre {
+    background-color: #F1F7FD;
+    padding: 14px;
+}
+
+.content {
+    background-color: #D6E3F2;
+    border: 6px solid #000;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 24px;
+    padding: 24px 60px;
+}
+
+.titulo {
+    font-family: "NewAmsterdam";
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #353535;
+    text-align: center;
+}
+
+.resumo {
+    font-family: "Acme";
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color:
+     #1b1b1b;
+}
+
+.buttons {
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button:nth-child(1) {
+    rotate: -45deg;
+    border-top: 3px solid #6e6e6e;
+    border-left: 3px solid #6e6e6e;
+}
+
+.button:nth-child(2) {
+    rotate: 45deg;
+    border-top: 3px solid #292929;
+    border-right: 3px solid #292929;
+}
+
+.image {
+    width: 100%;
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    position: relative;
+    bottom: -8px;
+    filter: drop-shadow(4px 0 8px #0000006c);
+}
+
+.texto .criadores {
+    display: none;
+}
+
+.texto.active .button:nth-child(1) {
+    border-top: 3px solid #292929;
+    border-left: 3px solid #292929;
+}
+
+.texto.active .button:nth-child(2) {
+    border-top: 3px solid #6e6e6e;
+    border-right: 3px solid #6e6e6e;
+}
+
+.texto.active .historia{
+    position: absolute;
+    width: 400px;
+    left: -100%;
+    display: none;
+}
+
+.texto.active .criadores {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfis {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 29px;
+}
+
+.foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.nome {
+    font-family: "NewAmsterdam";
+    font-size: 2rem;
+    color: #353535;
+}
+
+.cargo {
+    font-family: "Acme";
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.social img {
+    width: 28px;
+}

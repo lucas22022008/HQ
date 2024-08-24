@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medieval Battle</title>
+    <title>AMBIÇÃO & DESONRA</title>
 
     <link rel="stylesheet" href="./src/css/home.css">
     <link rel="stylesheet" href="./src/css/menu.css">
     <script src="src/js/menu.js" defer></script>
+    <script src="src/js/functions.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,8 +16,8 @@
             <a href="#" class="logo"><p>A&D</p></a>
             <ul class="nav-menu">
                 <li class="nav-item" onclick="fechar()"><a href='#inicio' class="nav-link">Inicio</a></li>
+                <li class="nav-item" onclick="fechar()"><a href='#sobre' class="nav-link">Sobre a HQ</a></li>
                 <li class="nav-item" onclick="fechar()"><a href='src/pages/PageNotFound/index.html' class="nav-link">Ler</a></li>
-                <li class="nav-item" onclick="fechar()"><a href='src/pages/PageNotFound/index.html' class="nav-link">Sobre a HQ</a></li>
                 <li class="nav-item" onclick="fechar()"><a href='src/pages/PageNotFound/index.html' class="nav-link">Apoie o Projeto</a></li>
                 <li class="nav-item" onclick="fechar()"><a href='src/pages/PageNotFound/index.html' class="nav-link">Wiki</a></li>
             </ul>
@@ -32,6 +33,70 @@
             <h1>AMBICAO & DESONRA</h1>
             <div id="sinopse">
                 <p>Uma HQ cativante onde, dominado pelo ódio e fúria contra um Rei que não cumpre com o seu dever, o nosso protagonista inicia sua trajetória em busca da dominação não só de seu reino, mas de todos!</p>
+            </div>
+        </section>
+        <section id="sobre">
+            <div class="content">
+                <div class="texto">
+
+                    <div class="historia">
+                        <div class="titulo">HISTÓRIA</div>
+                        <div class="resumo">Nesta obra somos apresentados a um bastardo e escravo, que após descobrir que é filho do já falecido rei decide-se acender na vida e forma alianças para alcançar sua ambição: o trono de todos os reinos, mesmo que encontre desonra e trevas no seu caminho.</div>
+                    </div>
+
+                    <div class="criadores">
+                        
+                        <div class="titulo">CRIADORES</div>
+
+                        <div class="perfis">
+                            <div class="perfil">
+                                <div class="foto">
+                                    <!-- <img src="" alt="Foto de Perfil de Pedro Lúcio"> -->
+                                </div>
+                                <div class="info">
+                                    <p class="nome">Pedro Lúcio</p>
+                                    <p class="cargo">Criador e Roteirista</p>
+                                    <div class="social">
+                                        <a href="https://x.com/pedrofoxzyo?t=A5SJnDtAHVJOA0P5RezTqA&s=09">
+                                            <img src="src/img/x.png" alt="X ou Antigo Twitter">
+                                        </a>
+                                        <a href="https://www.instagram.com/pedro_lucio_rt?igsh=MWdzeGVkcnN6dDBjMQ==">
+                                            <img src="src/img/instagram.png" alt="instagram">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="perfis">
+                            <div class="perfil">
+                                <div class="foto">
+                                    <!-- <img src="" alt="Foto de Perfil de Pedro Lúcio"> -->
+                                </div>
+                                <div class="info">
+                                    <p class="nome">Lucas Abmael</p>
+                                    <p class="cargo">Desenhista e Programador</p>
+                                    <div class="social">
+                                        <a href="https://x.com/lusqueta123?t=krkgnU3ZFdC6gzbmlfgf2w&s=09">
+                                            <img src="src/img/x.png" alt="X ou Antigo Twitter">
+                                        </a>
+                                        <a href="https://www.instagram.com/lucasabmael_?igsh=cmI2czc3eGMza2Y=">
+                                            <img src="src/img/instagram.png" alt="instagram">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="button" onclick="trocar()"></button>
+                        <button class="button" onclick="trocar()"></button>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="src/img/personagem.png" alt="Bennedict (Personagem Principal)">
+                </div>
             </div>
         </section>
     </main>

@@ -9,10 +9,19 @@
 :root {
     --principal: #4569cc;
 }
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 header {
     background: #fff;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 li {
