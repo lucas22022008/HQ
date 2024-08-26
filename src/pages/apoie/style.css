@@ -1,0 +1,66 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #E0EAF4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 90px 60px;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    height: 560px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 42px;
+    border-radius: 12px;
+    box-shadow: #00000077 0px 5px, #00000049 0px 10px, #00000031 0px 15px, #0000001c 0px 20px, #0000000a 0px 25px;
+}
+
+.card img {
+    height: 90px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+}
+
+.text p {
+    font-family: "NewAmsterdam";
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card a {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 12px 40px;
+    border-radius: 8px;
+}
+
+.card:nth-child(1) a {
+    background-color: #74f07a;
+    
+}
+
+.card:nth-child(2) a {
+    background-color: #678afd;
+}
+
+@media (min-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+}

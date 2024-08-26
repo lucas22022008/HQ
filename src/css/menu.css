@@ -6,6 +6,14 @@
     font-family: 'NewAmsterdam';
     src: url('../fonts/NewAmsterdam-Regular.ttf') format('truetype');
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Acme";
+}
+
 :root {
     --principal: #4569cc;
 }
@@ -40,6 +48,7 @@ li {
 a {
     color: #000;
     text-decoration: none;
+    display: block;
 }
 
 .navbar {
@@ -80,6 +89,42 @@ a {
     margin: 5px auto;
     background-color: #000;
     transition: all .3s ease-in-out;
+}
+
+.drop-hover {
+    position: relative;
+    padding: 10px 0;
+}
+
+.drop-hover .drop {
+    position: absolute;
+    top: 40px;
+    background-color: #ebeef8;
+    width: 160px;
+    display: none;
+}
+
+.drop-hover .drop::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid #ebeef8;
+}
+
+.drop a {
+    padding: 12px 8px;
+    &:hover {
+        background-color: #CCC;
+    }
+}
+
+.drop-hover:hover .drop{
+    display: block;
 }
 
 @media (max-width: 850px) {
